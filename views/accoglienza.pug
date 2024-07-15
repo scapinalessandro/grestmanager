@@ -1,0 +1,11 @@
+extends layout 
+
+block headexpand
+    script(src="/javascripts/accoglienza.js")
+
+block content
+    h1 Totale bambini:
+    h1 Presenti oggi:
+    h1 Assenti oggi:
+    button(onclick="location.href='http://localhost:3000/accoglienza/entrata';") Accoglienza in entrata 
+    button(onclick="location.href='http://localhost:3000/accoglienza/uscita';") Accoglienza in uscita 

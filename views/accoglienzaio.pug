@@ -1,0 +1,28 @@
+extends layout
+
+block headexpand
+  script(src='https://code.jquery.com/jquery-3.7.1.min.js')
+  script(src="/javascripts/accoglienza.js")
+
+block content
+  input(id='searchbb' type="text")
+  input(id='dataacc' type='date' value=currentdate)
+  button() Concludi
+
+  p= currentdate
+  div(id='allgroups')
+    each d in data
+      div(class='squadra')
+        h1= 'Squadra ' + d[0].colore_squadra
+        table(class="squadtable")
+          tr
+            th Cognome
+            th Nome
+            th Entra
+          each b in d[1]
+            tr
+              td= b.cognome
+              td= b.nome
+              td 
+                a(class='inoutbtn', bid=b.id)
+

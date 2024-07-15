@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://code.jquery.com/jquery-3.7.1.min.js')
+  
+    block headexpand
+  body
+    div.topnav
+      a.active()= title
+      a.topnavbtn(href='/') Home
+      a.topnavbtn(href='/accoglienza') Accoglienza
+      a.topnavbtn(href='/animatori') Animatori
+      a.topnavbtn(href='/magazzino') Magazzino
+      a.topnavbtn(href='/squadre') Squadre
+      a#respname(href='/responsabile')= respname
+    block content
